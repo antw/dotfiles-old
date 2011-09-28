@@ -1,18 +1,23 @@
-def link(file)
-  from = File.expand_path(File.dirname(__FILE__))
-  to   = File.expand_path('~')
+def link(paths)
+  from_dir = File.expand_path(File.dirname(__FILE__))
+  to_dir   = File.expand_path('~')
 
-  if File.file?("#{to}/.#{file}")
-    puts ".#{file} exists and is a real file"
-  elsif not File.symlink?("#{to}/.#{file}")
-    sh "ln -s #{from}/#{file} #{to}/.#{file}"
+  paths.each_pair do |to, from|
+    from = "#{from_dir}/#{from}"
+    to   = "#{to_dir}/#{to}"
+
+    if File.file?(to)
+      puts ".#{to} exists and is a real file"
+    elsif not File.symlink?(to)
+      sh "ln -s #{from} #{to}"
+    end
   end
 end
 
 desc 'links dotfiles to the home directory'
 task :default do
-  link 'vimrc.local'
-  link 'gvimrc.local'
-  link 'janus.rake'
-  link 'gitconfig'
+  link '.vimrc.local'  => 'vimrc.local'
+  link '.gvimrc.local' => 'gvimrc.local'
+  link '.janus.rake'   => 'janus.rake'
+  link '.gitconfig'    => 'gitconfig'
 end
