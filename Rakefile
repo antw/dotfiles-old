@@ -1,6 +1,8 @@
+HOME = File.expand_path('~')
+
 def link(paths)
   from_dir = File.expand_path(File.dirname(__FILE__))
-  to_dir   = File.expand_path('~')
+  to_dir   = HOME
 
   paths.each_pair do |to, from|
     from = "#{from_dir}/#{from}"
@@ -21,6 +23,8 @@ task :default do
   link '.janus.rake'   => 'janus.rake'
   link '.gitconfig'    => 'gitconfig'
 
-  link '.oh-my-zsh/custom/alias.zsh' => 'zsh/alias.zsh'
-  link '.oh-my-zsh/custom/paths.zsh' => 'zsh/paths.zsh'
+  link '.oh-my-zsh/custom/alias.zsh'          => 'zsh/alias.zsh'
+  link '.oh-my-zsh/custom/paths.zsh'          => 'zsh/paths.zsh'
+  link '.oh-my-zsh/themes/zsh/antw.zsh-theme' => 'zsh/antw.zsh-theme'
+  link '.zshrc'                               => 'zshrc'
 end
