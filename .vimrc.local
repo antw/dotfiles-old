@@ -1,0 +1,67 @@
+" No bad habits, thanks.
+map <Up> ""
+map <Down> ""
+map <Right> ""
+map <Left> ""
+
+" Function which removes all trailing whitespace in the current buffer.
+function! RemoveTrailingWhiteSpace()
+  %s/\s\+$//
+endfunction
+
+" Leader, Shift-2 removes all trailing whitespace.
+map <Leader>@ :call RemoveTrailingWhiteSpace()<CR>
+
+" Refresh the Command-T cache.
+map <Leader>~ :CommandTFlush<CR>
+
+" Always keep at least ten lines visible when at the bottom of a file.
+set scrolloff=5
+
+" Shut up Wesley!
+let g:HammerQuiet=1
+
+" No wrapping by default, thx.
+au BufRead,BufNewFile * set nowrap
+
+" Helpers for ronn files.
+function s:setupRonn()
+  set syntax=markdown
+  set wrap
+  set wm=2
+  set textwidth=78
+endfunction
+
+if has("autocmd")
+  " Enable *.mustache highlighting.
+  au BufNewFile,BufRead *.mustache set syntax=mustache
+  " Highlight ronn files as Markdown, and wrap at 78 cols.
+  au BufRead,BufNewFile *.ronn call s:setupRonn()
+endif
+
+" Coffeescript indent by two spaces
+au BufRead,BufNewFile *.coffee set tabstop=2 shiftwidth=2
+
+" C / Objective-C / C++ indent by four spaces.
+au BufRead,BufNewFile *.{c,m,cpp} set tabstop=4 shiftwidth=4
+
+" Javascript indent by four spaces
+au BufRead,BufNewFile *.{js,json} set tabstop=4 shiftwidth=4
+
+" Use JS syntax for JSON.
+au BufRead,BufNewFile *.json set syntax=javascript
+
+" Use Ruby syntax for Rabl.
+au BufRead,BufNewFile *.rabl set syntax=ruby
+
+" No wrapping in shell files.
+au BufRead,BufNewFile *.sh set nowrap
+
+" Ignore documentation/* in Command-T lists.
+:set wildignore+=doc/**,documentation/**,webrat.log,coverage,*.png,*.jpg,*.git,*.sassc
+
+" Wrapping rules.
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set wrap textwidth=72
+
+" E-mail authoring.
+au BufRead,BufNewFile *.email set wrap textwidth=68 syntax=markdown
