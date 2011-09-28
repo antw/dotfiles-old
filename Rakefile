@@ -8,11 +8,7 @@ def link(paths)
     from = "#{from_dir}/#{from}"
     to   = "#{to_dir}/#{to}"
 
-    if File.file?(to)
-      puts ".#{to} exists and is a real file"
-    elsif not File.symlink?(to)
-      sh "ln -s #{from} #{to}"
-    end
+    sh "ln -sf #{from} #{to}"
   end
 end
 
