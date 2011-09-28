@@ -12,4 +12,5 @@ task :default do
   link 'vimrc.local'
   link 'gvimrc.local'
   link 'janus.rake'
+  link 'gitconfig'
 end
