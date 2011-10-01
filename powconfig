@@ -1,0 +1,4 @@
+# For some reason $HOME isn't expanding...
+# export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+
+PATH="/Users/antw/.rbenv/shims:/Users/antw/.rbenv/bin:$PATH"; export PATH
