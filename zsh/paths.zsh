@@ -7,7 +7,8 @@ NODE_PATH="/usr/local/lib/node" ; export NODE_PATH
 # Python installs binaries to /usr/local/share/python.
 PATH="/usr/local/share/python:$PATH";  export PATH
 
-# User-specific binaries.
+# rbenv binaries.
+PATH="$HOME/.rbenv/bin:$PATH"; export PATH
 
 # Python installs binaries to /usr/local/share/python.
 PATH="$HOME/bin:$PATH";  export PATH
