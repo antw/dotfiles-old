@@ -1,3 +1,6 @@
+" Colour theme.
+color jellybeans+
+
 " No bad habits, thanks.
 map <Up> ""
 map <Down> ""
