@@ -4,6 +4,9 @@ set background=dark
 
 colorscheme jellybeans+
 
+" Don't italicise comments.
+hi Comment gui=NONE
+
 " solarized configuration
 " let g:solarized_bold=0
 " let g:solarized_italic=1
