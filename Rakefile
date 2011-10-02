@@ -22,6 +22,7 @@ task :default do
 
   link '.oh-my-zsh/custom/alias.zsh'      => 'zsh/alias.zsh'
   link '.oh-my-zsh/custom/paths.zsh'      => 'zsh/paths.zsh'
+  link '.oh-my-zsh/custom/editor.zsh'     => 'zsh/editor.zsh'
   link '.oh-my-zsh/themes/antw.zsh-theme' => 'zsh/antw.zsh-theme'
   link '.zshrc'                           => 'zshrc'
 end
