@@ -18,7 +18,6 @@ task :default do
   link '.gvimrc.local' => 'gvimrc.local'
   link '.janus.rake'   => 'janus.rake'
   link '.gitconfig'    => 'gitconfig'
-  link '.powconfig'    => 'powconfig'
 
   link '.oh-my-zsh/custom/alias.zsh'      => 'zsh/alias.zsh'
   link '.oh-my-zsh/custom/paths.zsh'      => 'zsh/paths.zsh'
