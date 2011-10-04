@@ -31,5 +31,5 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 # export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
-# RVM initialization.
-[[ -s "/Users/antw/.rvm/scripts/rvm" ]] && source "/Users/antw/.rvm/scripts/rvm"
+# rbenv initialization.
+eval "$(rbenv init -)"
