@@ -1,6 +1,8 @@
+require 'fileutils'
+
 HOME = File.expand_path('~')
 
-def link(paths)
+def dotfile(paths, *)
   from_dir = File.expand_path(File.dirname(__FILE__))
   to_dir   = HOME
 
@@ -8,20 +10,20 @@ def link(paths)
     from = "#{from_dir}/#{from}"
     to   = "#{to_dir}/#{to}"
 
-    sh "ln -sf #{from} #{to}"
+    FileUtils.ln_sf from, to, :verbose => true
   end
 end
 
 desc 'links dotfiles to the home directory'
 task :default do
-  link '.vimrc.local'  => 'vimrc.local'
-  link '.gvimrc.local' => 'gvimrc.local'
-  link '.janus.rake'   => 'janus.rake'
-  link '.gitconfig'    => 'gitconfig'
+  dotfile '.vimrc.local'  => 'vimrc.local'
+  dotfile '.gvimrc.local' => 'gvimrc.local'
+  dotfile '.janus.rake'   => 'janus.rake'
+  dotfile '.gitconfig'    => 'gitconfig'
 
-  link '.oh-my-zsh/custom/alias.zsh'      => 'zsh/alias.zsh'
-  link '.oh-my-zsh/custom/paths.zsh'      => 'zsh/paths.zsh'
-  link '.oh-my-zsh/custom/editor.zsh'     => 'zsh/editor.zsh'
-  link '.oh-my-zsh/themes/antw.zsh-theme' => 'zsh/antw.zsh-theme'
-  link '.zshrc'                           => 'zshrc'
+  dotfile '.oh-my-zsh/custom/alias.zsh'      => 'zsh/alias.zsh'
+  dotfile '.oh-my-zsh/custom/paths.zsh'      => 'zsh/paths.zsh'
+  dotfile '.oh-my-zsh/custom/editor.zsh'     => 'zsh/editor.zsh'
+  dotfile '.oh-my-zsh/themes/antw.zsh-theme' => 'zsh/antw.zsh-theme'
+  dotfile '.zshrc'                           => 'zshrc'
 end
