@@ -32,4 +32,7 @@ source $ZSH/oh-my-zsh.sh
 # export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
 # rbenv initialization.
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
+
+# Load RVM.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
