@@ -61,7 +61,7 @@ au BufRead,BufNewFile *.rabl set syntax=ruby
 au BufRead,BufNewFile *.sh set nowrap
 
 " Ignore documentation/* in Command-T lists.
-:set wildignore+=doc/**,documentation/**,webrat.log,coverage,*.png,*.jpg,*.git,*.sassc
+:set wildignore+=doc/**,documentation/**,webrat.log,coverage,*.png,*.jpg,*.git,*.sassc,tmp/**
 
 " Wrapping rules.
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set wrap textwidth=72
