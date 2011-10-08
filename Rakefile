@@ -20,6 +20,7 @@ task :default do
   dotfile '.gvimrc.local' => 'gvimrc.local'
   dotfile '.janus.rake'   => 'janus.rake'
   dotfile '.gitconfig'    => 'gitconfig'
+  dotfile '.gemrc'        => 'gemrc'
 
   dotfile '.oh-my-zsh/custom/alias.zsh'      => 'zsh/alias.zsh'
   dotfile '.oh-my-zsh/custom/paths.zsh'      => 'zsh/paths.zsh'
