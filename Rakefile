@@ -21,6 +21,7 @@ task :default do
   dotfile '.janus.rake'   => 'janus.rake'
   dotfile '.gitconfig'    => 'gitconfig'
   dotfile '.gemrc'        => 'gemrc'
+  dotfile '.rspec'        => 'rspec'
 
   dotfile '.oh-my-zsh/custom/alias.zsh'      => 'zsh/alias.zsh'
   dotfile '.oh-my-zsh/custom/paths.zsh'      => 'zsh/paths.zsh'
