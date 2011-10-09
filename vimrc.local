@@ -27,20 +27,8 @@ let g:HammerQuiet=1
 " No wrapping by default, thx.
 au BufRead,BufNewFile * set nowrap
 
-" Helpers for ronn files.
-function s:setupRonn()
-  set syntax=markdown
-  set wrap
-  set wm=2
-  set textwidth=78
-endfunction
-
-if has("autocmd")
-  " Enable *.mustache highlighting.
-  au BufNewFile,BufRead *.mustache set syntax=mustache
-  " Highlight ronn files as Markdown, and wrap at 78 cols.
-  au BufRead,BufNewFile *.ronn call s:setupRonn()
-endif
+au BufRead,BufNewFile *.mustache set syntax=mustache
+au BufRead,BufNewFile *.ronn set syntax=markdown wrap wm=2 textwidth=78
 
 " Coffeescript indent by two spaces
 au BufRead,BufNewFile *.coffee set tabstop=2 shiftwidth=2
