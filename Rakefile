@@ -24,6 +24,7 @@ task :default do
   dotfile '.rspec'        => 'rspec'
 
   dotfile '.oh-my-zsh/custom/alias.zsh'      => 'zsh/alias.zsh'
+  dotfile '.oh-my-zsh/custom/correction.zsh' => 'zsh/correction.zsh'
   dotfile '.oh-my-zsh/custom/paths.zsh'      => 'zsh/paths.zsh'
   dotfile '.oh-my-zsh/custom/editor.zsh'     => 'zsh/editor.zsh'
   dotfile '.oh-my-zsh/themes/antw.zsh-theme' => 'zsh/antw.zsh-theme'
