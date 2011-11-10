@@ -34,5 +34,8 @@ source $ZSH/oh-my-zsh.sh
 # rbenv initialization.
 # eval "$(rbenv init -)"
 
+# Machine-specific configuration.
+[[ -f "$HOME/.localrc" ]] && . "$HOME/.localrc"
+
 # Load RVM.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
