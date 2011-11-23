@@ -57,6 +57,9 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} set wrap textwidth=72
 " E-mail authoring.
 au BufRead,BufNewFile *.email set wrap textwidth=68 syntax=markdown
 
+" JSONify files are just Ruby.
+au BufRead,BufNewFile *.jsonify set syntax=ruby
+
 " fill rest of line with characters
 function! FillLine( str )
   " set tw to the desired total length
