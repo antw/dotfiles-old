@@ -1,0 +1,2 @@
+" Hide the MacVim toolbar.
+set guioptions-=T
