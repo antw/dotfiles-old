@@ -1,6 +1,6 @@
 " Appearance.
 set background=dark
-colorscheme jellybeans
+colorscheme ir_black
 
 " Don't italicise comments.
 hi Comment gui=NONE
