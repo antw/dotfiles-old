@@ -26,6 +26,9 @@ map <Leader>@ :call RemoveTrailingWhiteSpace()<CR>
 " Always keep at least five lines visible when at the bottom of a file.
 set scrolloff=5
 
+" Highlight .jbuilder as Ruby.
+au BufRead,BufNewFile *.jbuilder set syntax=ruby
+
 " No wrapping by default, thx.
 au BufRead,BufNewFile * set nowrap
 
