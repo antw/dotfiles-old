@@ -1,0 +1,185 @@
+"" Vundle Setup
+set nocompatible                " choose no compatibility with legacy vi
+filetype off                    " required by Vindle
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" Langauges
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-git'
+Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
+Bundle 'taq/vim-rspec'
+Bundle 'vim-ruby/vim-ruby'
+
+" Tools
+Bundle 'wincent/Command-T'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
+
+" Colours
+Bundle 'wgibbs/vim-irblack'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
+
+syntax enable
+set encoding=utf-8
+set showcmd                     " display incomplete commands
+filetype plugin indent on       " load file type plugins + indentation
+
+"" Whitespace ----------------------------------------------------------------
+
+set nowrap                      " don't wrap lines
+set tabstop=2 shiftwidth=2      " a tab is two spaces (or set this to 4)
+set expandtab                   " use spaces, not tabs (optional)
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
+"" Searching -----------------------------------------------------------------
+
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital
+                                " letter
+
+"" Appearance ----------------------------------------------------------------
+
+set relativenumber              " line numbers - relative from current line.
+set ruler                       " line and column number.
+set list                        " show invisble characters.
+set background=dark
+colorscheme ir_black
+
+" List chars
+set listchars=""                " Reset the listchars
+set listchars=tab:\ \           " a tab should display as "  "
+set listchars+=trail:.          " show trailing spaces as dots
+set listchars+=extends:>        " The character to show in the last column
+                                " when wrap is off and the line continues
+                                " beyond the right of the screen
+set listchars+=precedes:<       " The character to show in the last column
+                                " when wrap is off and the line continues
+                                " beyond the right of the screen
+
+" Always keep at least five lines visible when at the bottom of a file.
+set scrolloff=5
+
+" use :w!! to write to a file using sudo if you forgot to 'sudo vim file'
+" (it will prompt for sudo password when writing)
+cmap w!! %!sudo tee > /dev/null %
+
+" Create the directory containing the file in the buffer
+nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
+
+" Don't italicise comments.
+hi Comment gui=NONE
+
+" Highlight lines longer than 78 characters.
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+autocmd BufNewFile,BufReadPost * match OverLength /\%79v.\+/
+
+" Discourage using cursor keys.
+map <Up> <nop>
+map <Down> <nop>
+map <Right> <nop>
+map <Left> <nop>
+imap <Up> <nop>
+imap <Down> <nop>
+imap <Left> <nop>
+imap <Right> <nop>
+
+" Function which removes all trailing whitespace in the current buffer.
+function! RemoveTrailingWhiteSpace()
+  %s/\s\+$//
+endfunction
+
+" Leader, Shift-2 removes all trailing whitespace.
+map <Leader>@ :call RemoveTrailingWhiteSpace()<CR>
+
+" Highlight .jbuilder as Ruby.
+au BufRead,BufNewFile *.jbuilder setl syntax=ruby
+
+" No wrapping by default, thx.
+au BufRead,BufNewFile * set nowrap
+
+"" Ignores -------------------------------------------------------------------
+
+" Disable output and VCS files
+set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.class,.svn,*.gem
+
+" Disable archive files
+set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
+
+" Ignore bundler and sass cache
+set wildignore+=vendor/gems/*,vendor/cache/*,.bundle/*,.sass-cache/*
+
+" Disable temp and backup files
+set wildignore+=*.swp,*~,._*
+
+" Additional ignores for Command-T lists.
+set wildignore+=doc/**,documentation/**,webrat.log,coverage
+set wildignore+=*.png,*.jpg,*.git,*.sassc,tmp/**
+
+"" Backup and Swap -----------------------------------------------------------
+
+set backupdir=~/.vim/_backup//  " where to put backup files.
+set directory=~/.vim/_temp//    " where to put swap files.
+
+"" Status Line ---------------------------------------------------------------
+
+set laststatus=2  " always show the status bar
+
+" Without setting this, ZoomWin restores windows in a way that causes
+" equalalways behavior to be triggered the next time CommandT is used.
+" This is likely a bludgeon to solve some other issue, but it works
+set noequalalways
+
+" Start the status line.
+set statusline=%f\ %m\ %r
+
+" Add fugitive.
+set statusline+=%{fugitive#statusline()}
+
+" Finish the statusline
+set statusline+=Line:%l/%L\ (%p%%)
+set statusline+=\ Col:%v
+
+"" Useful Helpers ------------------------------------------------------------
+
+" Toggle line numbers from absolute to relative with F2.
+map <silent> <leader>l :if &number <Bar>
+    \set relativenumber <Bar>
+      \else <Bar>
+    \set number <Bar>
+      \endif<CR>
+
+" Fill rest of line with characters.
+function! FillLine( str )
+  " set tw to the desired total length
+  let tw = &textwidth
+
+  if tw==0 | let tw = 78 | endif
+
+  " strip trailing spaces first
+  .s/[[:space:]]*$//
+
+  " calculate total number of 'str's to insert
+  let reps = (tw - col("$")) / len(a:str)
+
+  " insert them, if there's room, removing trailing spaces (though forcing
+  " there to be one)
+  if reps > 0
+    .s/$/\=(' '.repeat(a:str, reps))/
+  endif
+endfunction
+
+" Maps comment-line completion to <Leader>, Shift+3 on UK keyboards.
+map <Leader>£ :call FillLine( '-' )<CR>

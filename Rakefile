@@ -16,12 +16,10 @@ end
 
 desc 'links dotfiles to the home directory'
 task :default do
-  dotfile '.vimrc.after'   => 'vimrc.after'
+  dotfile '.vim'           => 'vim'
+  dotfile '.vimrc'         => 'vim/vimrc'
+  dotfile '.gvimrc'        => 'vim/gvimrc'
 
-  dotfile '.gvimrc.before' => 'gvimrc.before'
-  dotfile '.gvimrc.after'  => 'gvimrc.after'
-
-  dotfile '.janus.rake'    => 'janus.rake'
   dotfile '.gitconfig'     => 'gitconfig'
   dotfile '.gemrc'         => 'gemrc'
   dotfile '.rspec'         => 'rspec'

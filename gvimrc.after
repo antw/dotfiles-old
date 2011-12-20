@@ -1,7 +1,0 @@
-" Theme and Appearance.
-" Default window height.
-set lines=48 columns=100
-
-" Font and size.
-set guifont=Menlo:h13
-set linespace=1
