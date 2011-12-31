@@ -38,4 +38,4 @@ source $ZSH/oh-my-zsh.sh
 [[ -f "$HOME/.localrc" ]] && . "$HOME/.localrc"
 
 # Load RVM.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"

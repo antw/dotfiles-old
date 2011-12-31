@@ -8,5 +8,5 @@ NODE_PATH="/usr/local/lib/node" ; export NODE_PATH
 PATH="/usr/local/share/python:$PATH";  export PATH
 PYTHONPATH="/usr/local/lib/python2.7/site-packages"; export PYTHONPATH
 
-# Python installs binaries to /usr/local/share/python.
-PATH="$HOME/bin:$PATH";  export PATH
+# User-local binaries.
+PATH="$HOME/bin:$PATH"; export PATH

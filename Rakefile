@@ -30,4 +30,5 @@ task :default do
   dotfile '.oh-my-zsh/custom/editor.zsh'     => 'zsh/editor.zsh'
   dotfile '.oh-my-zsh/themes/antw.zsh-theme' => 'zsh/antw.zsh-theme'
   dotfile '.zshrc'                           => 'zshrc'
+  dotfile '.zshenv'                          => 'zshenv'
 end
