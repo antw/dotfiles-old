@@ -4,6 +4,7 @@ alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias giti='git'
 
 alias tvnamer="tvnamer --config='$HOME/.tvnamer'"
+alias livestreamer='livestreamer --player /Applications/VLC.app/Contents/MacOS/VLC'
 
 export LESS="-R -M -S --shift 5"
 
