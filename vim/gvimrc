@@ -5,7 +5,7 @@ set guioptions-=T               " hide the GVim/MacVim toolbar
 set lines=48 columns=100        " default window height.
 
 set guifont=Menlo:h13           " font and size
-set linespace=1                 " line heights
+set linespace=2                 " line heights
 
 autocmd VimResized * wincmd =   " automatically resize splits when
                                 " resizing MacVim window
