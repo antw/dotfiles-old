@@ -1,6 +1,7 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -o errexit
+set -o errtrace
 
 declare -r dotfile_path="$( cd "$( dirname "$0" )" && pwd )"
 
