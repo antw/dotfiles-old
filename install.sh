@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 
-set -o errexit    # Exit if any command exits with non-zero status.
-set -o errtrace
+set -o errexit
 
 declare -r dotfile_path="$( cd "$( dirname "$0" )" && pwd )"
 
