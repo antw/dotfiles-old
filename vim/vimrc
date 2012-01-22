@@ -25,6 +25,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'sickill/vim-pasta'
 
 " Colours
 Bundle 'wgibbs/vim-irblack'
