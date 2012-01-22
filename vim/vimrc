@@ -92,7 +92,7 @@ nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 hi Comment gui=NONE
 
 " Highlight lines longer than 78 characters.
-hi OverLength ctermbg=red guibg=#592929
+hi OverLength ctermbg=red ctermfg=black guibg=#592929
 au BufNewFile,BufReadPost * match OverLength /\%79v.\+/
 
 " Disable long-line highlighting for some filetypes.
