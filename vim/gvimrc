@@ -1,14 +1,14 @@
-set guioptions-=T               " hide the GVim/MacVim toolbar
+set guioptions-=T                " hide the GVim/MacVim toolbar
 
 "" Appearance ----------------------------------------------------------------
 
-set lines=48 columns=100        " default window height.
+set lines=48 columns=100         " default window height.
 
-set guifont=Menlo:h13           " font and size
-set linespace=2                 " line heights
+set guifont=Meslo\ LG\ S\ DZ:h13 " font and size
+set linespace=0                  " line heights
 
-autocmd VimResized * wincmd =   " automatically resize splits when
-                                " resizing MacVim window
+autocmd VimResized * wincmd =    " automatically resize splits when
+                                 " resizing MacVim window
 
 " Highlight lines longer than 78 characters.
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
