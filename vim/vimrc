@@ -16,6 +16,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'taq/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'avakhov/vim-yaml'
+Bundle 'vim-scripts/VimClojure'
 
 " Tools
 Bundle 'wincent/Command-T'
