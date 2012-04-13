@@ -11,8 +11,8 @@ export LESS="-R -M -S --shift 5"
 
 if [[ -f /etc/lsb-release ]] ; then
   # Ubuntu
-  alias ls="ls --color"
+  alias ls="ls --color --classify"
 else
   # OS X.
-  alias ls="ls -G"
+  alias ls="ls -G -F"
 fi
