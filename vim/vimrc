@@ -196,4 +196,5 @@ function! FillLine( str )
 endfunction
 
 " Maps comment-line completion to <Leader>, Shift+3 on UK keyboards.
+map <Leader># :call FillLine( '-' )<CR>
 map <Leader>£ :call FillLine( '-' )<CR>
