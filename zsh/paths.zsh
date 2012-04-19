@@ -1,5 +1,5 @@
 # Make /usr/local/bin available before /usr/bin.
-PATH="/usr/local/bin:$PATH"; export PATH
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"; export PATH
 
 # Node installs binaries to /usr/local/share/npm/bin
 PATH="/usr/local/share/npm/bin:$PATH"; export PATH
