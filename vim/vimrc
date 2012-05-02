@@ -140,7 +140,8 @@ set wildignore+=vendor/gems/*,vendor/cache/*,.bundle/*,.sass-cache/*
 set wildignore+=*.swp,*~,._*
 
 " Additional ignores for Command-T lists.
-set wildignore+=doc/**,documentation/**,webrat.log,coverage
+set wildignore+=doc/**,documentation/**,public/doc/**
+set wildignore+=webrat.log,coverage
 set wildignore+=*.png,*.jpg,*.git,*.sassc,tmp/**
 
 "" Backup and Swap -----------------------------------------------------------
