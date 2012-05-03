@@ -7,7 +7,7 @@ let g:ctrlp_max_files = 10000
 if has("unix")
     let g:ctrlp_user_command = {
                 \   'types': {
-                \       1: ['.git/', 'cd %s && git ls-files']
+                \       1: ['.git/', 'cd %s && git ls-files -o -c --exclude-standard']
                 \   },
                 \   'fallback': 'find %s -type f | head -' . g:ctrlp_max_files
                 \ }
