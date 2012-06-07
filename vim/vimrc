@@ -19,8 +19,8 @@ Bundle 'avakhov/vim-yaml'
 Bundle 'vim-scripts/VimClojure'
 
 " Tools
-" Bundle 'wincent/Command-T'
-Bundle 'kien/ctrlp.vim'
+Bundle 'wincent/Command-T'
+" Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'michaeljsmith/vim-indent-object'

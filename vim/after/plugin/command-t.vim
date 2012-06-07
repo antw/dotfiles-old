@@ -1,12 +1,16 @@
-if has("gui_macvim")
-  map <D-t> :CommandTFlush<CR>\|:CommandT<CR>
-  imap <D-t> <ESC>:CommandTFlush<CR>\|:CommandT<CR>
-else
-  map <C-t> :CommandTFlush<CR>\|:CommandT<CR>
-  imap <C-t> <ESC>:CommandTFlush<CR>\|:CommandT<CR>
-endif
+" if has("gui_macvim")
+  " map <D-p> :CommandTFlush<CR>\|:CommandT<CR>
+  " imap <D-p> <ESC>:CommandTFlush<CR>\|:CommandT<CR>
+" else
+  " map <C-p> :CommandTFlush<CR>\|:CommandT<CR>
+  " imap <C-p> <ESC>:CommandTFlush<CR>\|:CommandT<CR>
+" endif
 
-map <A-t> :CommandTBuffer<CR>
-imap <A-t> <ESC>:CommandTBuffer<CR>
+map <C-p> :CommandTFlush<CR>\|:CommandT<CR>
+imap <C-p> <ESC>:CommandTFlush<CR>\|:CommandT<CR>
 
-let CommandTMaxHeight = 10
+map <A-p> :CommandTBuffer<CR>
+imap <A-p> <ESC>:CommandTBuffer<CR>
+
+let g:CommandTMatchWindowReverse = 1
+let g:CommandTMaxHeight = 10
