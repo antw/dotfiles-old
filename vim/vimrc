@@ -101,6 +101,9 @@ au BufNewFile,BufReadPost * match OverLength /\%79v.\+/
 " Disable long-line highlighting for some filetypes.
 au BufNewFile,BufReadPost *.{eco,html,haml} hi OverLength ctermbg=NONE guibg=NONE
 
+" Indent by four spaces in JS / Python.
+au BufNewFile,BufReadPost *.{js,py} set sw=4 ts=4 et
+
 " Discourage using cursor keys.
 map <Up> <nop>
 map <Down> <nop>
