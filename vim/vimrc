@@ -62,7 +62,7 @@ set smartcase                   " ... unless they contain at least one capital
 set ruler                       " line and column number.
 set list                        " show invisble characters.
 set background=dark
-colorscheme ir_black
+colorscheme jellybeans
 
 if has('relativenumber')
   set relativenumber            " line numbers - relative from current line.
