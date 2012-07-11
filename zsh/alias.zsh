@@ -2,6 +2,7 @@ alias te='terminitor'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -s -l /usr/local/var/postgres/run.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias giti='git'
+alias irb='pry'
 
 alias tvnamer="tvnamer --config='$HOME/.tvnamer'"
 alias livestreamer='livestreamer --player /Applications/VLC.app/Contents/MacOS/VLC'
