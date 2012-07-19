@@ -43,6 +43,8 @@ filetype plugin indent on       " load file type plugins + indentation
 
 let mapleader=","               " leader is , instead of \
 
+set splitright                  " vsplits go to the right
+
 "" Whitespace ----------------------------------------------------------------
 
 set nowrap                      " don't wrap lines
