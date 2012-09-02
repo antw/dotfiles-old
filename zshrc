@@ -24,7 +24,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew gem git)
+plugins=(brew gem git fasd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,6 +36,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Machine-specific configuration.
 [[ -f "$HOME/.localrc" ]] && . "$HOME/.localrc"
-
-# Load RVM.
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
