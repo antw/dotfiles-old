@@ -15,10 +15,6 @@ set linespace=2                           " line heights
 autocmd VimResized * wincmd =             " automatically resize splits when
                                           " resizing MacVim window
 
-" Highlight lines longer than 78 characters.
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-autocmd BufNewFile,BufReadPost * match OverLength /\%79v.\+/
-
 "" Font Size Toggling --------------------------------------------------------
 
 nnoremap <leader>w :silent! let &guifont = substitute(
