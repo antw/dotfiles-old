@@ -5,7 +5,7 @@ alias giti='git'
 alias irb='pry'
 
 alias tvnamer="tvnamer --config='$HOME/.tvnamer'"
-alias livestreamer='livestreamer --player /Applications/VLC.app/Contents/MacOS/VLC'
+alias livestreamer='/usr/local/share/python/livestreamer --player /Applications/VLC.app/Contents/MacOS/VLC'
 alias youtube-dl='youtube-dl --title --continue'
 
 export LESS="-R -M -S --shift 5"
