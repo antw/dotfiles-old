@@ -1,5 +1,10 @@
 set guioptions-=T                         " hide the GVim/MacVim toolbar
 
+set guioptions-=l                         " hide the scrollbars
+set guioptions-=L
+set guioptions-=r
+set guioptions-=R
+
 "" Appearance ----------------------------------------------------------------
 
 set lines=48 columns=100                  " default window height.
