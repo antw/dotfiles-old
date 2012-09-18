@@ -19,6 +19,13 @@ autocmd VimResized * wincmd =             " automatically resize splits when
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 autocmd BufNewFile,BufReadPost * match OverLength /\%79v.\+/
 
+"" Font Size Toggling --------------------------------------------------------
+
+nnoremap <leader>w :silent! let &guifont = substitute(
+  \ &guifont, ':h\zs\d\+', '17', '')<CR>
+nnoremap <leader>s :silent! let &guifont = substitute(
+  \ &guifont, ':h\zs\d\+', '14', '')<CR>
+
 "" Mappings ------------------------------------------------------------------
 
 if has("gui_macvim")
