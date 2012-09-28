@@ -101,10 +101,6 @@ nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 " Don't italicise comments.
 hi Comment gui=NONE
 
-" Highlight lines longer than 78 characters.
-hi OverLength ctermbg=red ctermfg=black guibg=#592929
-au BufNewFile,BufReadPost * match OverLength /\%79v.\+/
-
 " Disable long-line highlighting for some filetypes.
 au BufNewFile,BufReadPost *.{eco,html,haml} hi OverLength ctermbg=NONE guibg=NONE
 
