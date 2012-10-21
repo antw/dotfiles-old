@@ -99,7 +99,7 @@ cmap w!! %!sudo tee > /dev/null %
 nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 
 " Don't italicise comments.
-hi Comment gui=NONE
+hi Comment gui=NONE guifg=#777777
 
 " Disable long-line highlighting for some filetypes.
 au BufNewFile,BufReadPost *.{eco,html,haml} hi OverLength ctermbg=NONE guibg=NONE
