@@ -25,3 +25,5 @@
   pretty = %C(yellow)%h%Creset - %s%C(blue)%d%Creset %C(green)(%cr)%Creset %C(black)<%an>%Creset
 [grep]
   lineNumber = true
+[push]
+  default = simple
