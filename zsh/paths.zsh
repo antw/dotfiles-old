@@ -13,3 +13,7 @@ PYTHONPATH="/usr/local/lib/python2.7/site-packages"; export PYTHONPATH
 
 # User-local binaries.
 PATH="$HOME/bin:$PATH"; export PATH
+
+# Java.
+# JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_09.jdk/Contents/Home"; export JAVA_HOME
+# PATH="$JAVA_HOME/bin:$PATH"; export PATH
