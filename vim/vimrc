@@ -46,6 +46,8 @@ let mapleader=","               " leader is , instead of \
 
 set splitright                  " vsplits go to the right
 
+set clipboard=unnamed           " use OS clipboard
+
 "" Whitespace ----------------------------------------------------------------
 
 set nowrap                      " don't wrap lines
