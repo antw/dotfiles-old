@@ -8,6 +8,8 @@ alias tvnamer="tvnamer --config='$HOME/.tvnamer'"
 alias livestreamer='/usr/local/share/python/livestreamer --player /Applications/VLC.app/Contents/MacOS/VLC'
 alias youtube-dl='youtube-dl --title --continue'
 
+alias sshfs='sshfs -C -o reconnect,workaround=all,follow_symlinks'
+
 export LESS="-R -M -S --shift 5"
 
 if [[ -f /etc/lsb-release ]] ; then
