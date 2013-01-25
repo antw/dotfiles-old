@@ -1,6 +1,7 @@
 "" Vundle Setup
 set nocompatible                " choose no compatibility with legacy vi
 filetype off                    " required by Vindle
+set shell=/bin/zsh
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
