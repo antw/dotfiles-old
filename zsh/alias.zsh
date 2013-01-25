@@ -3,6 +3,7 @@ alias pgstart='pg_ctl -D /usr/local/var/postgres -s -l /usr/local/var/postgres/r
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias giti='git'
 alias irb='pry'
+alias be='bundle exec'
 
 alias tvnamer="tvnamer --config='$HOME/.tvnamer'"
 alias livestreamer='/usr/local/share/python/livestreamer --player /Applications/VLC.app/Contents/MacOS/VLC'
