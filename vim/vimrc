@@ -105,6 +105,9 @@ cmap w!! %!sudo tee > /dev/null %
 " Create the directory containing the file in the buffer
 nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 
+" Yanking a block returns to the last cursor position, not the top.
+:vmap y ygv<Esc>
+
 " Don't italicise comments.
 hi Comment gui=NONE guifg=#777777
 
