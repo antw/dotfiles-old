@@ -17,7 +17,10 @@ Bundle 'tpope/vim-rails'
 Bundle 'taq/vim-rspec'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'avakhov/vim-yaml'
-Bundle 'vim-scripts/VimClojure'
+" Bundle 'vim-scripts/VimClojure'
+Bundle 'tpope/vim-foreplay'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
 
 " Tools
 Bundle 'wincent/Command-T'
