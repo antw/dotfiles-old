@@ -7,7 +7,7 @@ set guioptions-=R
 
 "" Appearance ----------------------------------------------------------------
 
-set lines=48 columns=100                  " default window height.
+set lines=42 columns=85                   " default window height.
 
 set guifont=Droid\ Sans\ Mono\ Dotted:h17 " font and size
 set linespace=2                           " line heights
