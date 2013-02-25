@@ -40,6 +40,7 @@ Bundle 'rosenfeld/conque-term'
 " Colours
 Bundle 'wgibbs/vim-irblack'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'chriskempson/base16-vim'
 Bundle 'nanotech/jellybeans.vim'
 
 syntax enable
@@ -73,7 +74,8 @@ set smartcase                   " ... unless they contain at least one capital
 set ruler                       " line and column number.
 set list                        " show invisble characters.
 set background=dark
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme base16-default
 
 set cc=79                       " show right margin at 78 characters.
 hi ColorColumn guibg=#191919 ctermbg=black
