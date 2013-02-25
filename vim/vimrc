@@ -110,6 +110,12 @@ nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 " Yanking a block returns to the last cursor position, not the top.
 :vmap y ygv<Esc>
 
+" Remap EasyMotion.
+let g:EasyMotion_leader_key = ';'
+
+" Yanking a block returns to the last cursor position, not the top.
+:vmap y ygv<Esc>
+
 " Don't italicise comments.
 hi Comment gui=NONE guifg=#777777
 
