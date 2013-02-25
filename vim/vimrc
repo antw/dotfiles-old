@@ -218,3 +218,7 @@ endfunction
 " Maps comment-line completion to <Leader>, Shift+3 on UK keyboards.
 map <Leader># :call FillLine( '-' )<CR>
 map <Leader>£ :call FillLine( '-' )<CR>
+
+" Indent Clojure doc-strings.
+let g:clojure_align_multiline_strings = 1
+let g:clojure_fuzzy_indent_patterns = ['^with', '^def', '^let', '^lazy-']
