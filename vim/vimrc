@@ -23,8 +23,8 @@ Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
 
 " Tools
-Bundle 'wincent/Command-T'
-" Bundle 'kien/ctrlp.vim'
+" Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
