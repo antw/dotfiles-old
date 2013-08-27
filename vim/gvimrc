@@ -9,7 +9,8 @@ set guioptions-=R
 
 set lines=42 columns=85                   " default window height.
 
-set guifont=Droid\ Sans\ Mono\ Dotted:h17 " font and size
+" set guifont=Droid\ Sans\ Mono\ Dotted:h17 " font and size
+set guifont=Droid\ Sans\ Mono\ Dotted\ for\ Powerline:h17 " font and size
 set linespace=2                           " line heights
 
 autocmd VimResized * wincmd =             " automatically resize splits when
