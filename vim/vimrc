@@ -33,7 +33,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'sickill/vim-pasta'
 Bundle 'rosenfeld/conque-term'
 
@@ -192,6 +192,19 @@ set statusline+=%{fugitive#statusline()}
 " Finish the statusline
 set statusline+=Line:%l/%L\ (%p%%)
 set statusline+=\ Col:%v
+
+if has("gui")
+  let g:airline_powerline_fonts = 1
+else
+  let g:airline_left_sep = ''
+  let g:airline_right_sep = ''
+endif
+
+let g:airline_theme = 'base16'
+let g:airline#extensions#whitespace#show_message = 0
+
+" Remove the LN symbol from the line info section.
+let g:airline_section_z = '%3p%% %3l:%2c'
 
 "" Useful Helpers ------------------------------------------------------------
 
