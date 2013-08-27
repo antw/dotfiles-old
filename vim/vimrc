@@ -36,6 +36,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'bling/vim-airline'
 Bundle 'sickill/vim-pasta'
 Bundle 'rosenfeld/conque-term'
+Bundle 'mbbill/undotree'
 
 " Colours
 Bundle 'wgibbs/vim-irblack'
@@ -114,6 +115,9 @@ nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 " Remap EasyMotion.
 let g:EasyMotion_leader_key = ';'
 
+" Map GUndo
+nnoremap <leader>u :UndotreeToggle<CR>
+
 " Yanking a block returns to the last cursor position, not the top.
 :vmap y ygv<Esc>
 
@@ -173,6 +177,11 @@ set wildignore+=*.png,*.jpg,*.git,*.sassc,tmp/**
 
 set backupdir=~/.vim/_backup//  " where to put backup files.
 set directory=~/.vim/_temp//    " where to put swap files.
+
+if has("persistent_undo")
+  set undodir=~/.vim/_temp//
+  set undofile
+endif
 
 "" Status Line ---------------------------------------------------------------
 
