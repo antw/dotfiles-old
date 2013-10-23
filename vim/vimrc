@@ -37,6 +37,7 @@ Bundle 'bling/vim-airline'
 Bundle 'sickill/vim-pasta'
 Bundle 'rosenfeld/conque-term'
 Bundle 'mbbill/undotree'
+Bundle 'godlygeek/tabular'
 
 " Colours
 Bundle 'wgibbs/vim-irblack'
