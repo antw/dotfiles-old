@@ -79,7 +79,7 @@ set background=dark
 " colorscheme jellybeans
 colorscheme base16-default
 
-set cc=79                       " show right margin at 78 characters.
+set cc=81                       " show right margin at 80 characters.
 hi ColorColumn guibg=#191919 ctermbg=black
 
 if has('relativenumber')
@@ -229,7 +229,7 @@ function! FillLine( str )
   " set tw to the desired total length
   let tw = &textwidth
 
-  if tw==0 | let tw = 78 | endif
+  if tw==0 | let tw = 80 | endif
 
   " strip trailing spaces first
   .s/[[:space:]]*$//
