@@ -80,7 +80,6 @@ set background=dark
 colorscheme base16-default
 
 set cc=81                       " show right margin at 80 characters.
-hi ColorColumn guibg=#191919 ctermbg=black
 
 set number
 
@@ -117,12 +116,6 @@ nnoremap <leader>u :UndotreeToggle<CR>
 " Yanking a block returns to the last cursor position, not the top.
 :vmap y ygv<Esc>
 
-" Don't italicise comments.
-hi Comment gui=NONE guifg=#777777
-
-" Disable long-line highlighting for some filetypes.
-au BufNewFile,BufReadPost *.{eco,html,haml} hi OverLength ctermbg=NONE guibg=NONE
-
 " Indent by four spaces in JS / Python.
 au BufNewFile,BufReadPost *.{js,py} set sw=4 ts=4 et
 
@@ -135,17 +128,6 @@ imap <Up> <nop>
 imap <Down> <nop>
 imap <Left> <nop>
 imap <Right> <nop>
-
-" Function which removes all trailing whitespace in the current buffer.
-function! RemoveTrailingWhiteSpace()
-  %s/\s\+$//
-endfunction
-
-" Leader, Shift-2 removes all trailing whitespace.
-map <Leader>@ :call RemoveTrailingWhiteSpace()<CR>
-
-" Highlight .jbuilder as Ruby.
-au BufRead,BufNewFile *.jbuilder setl syntax=ruby
 
 " No wrapping by default, thx.
 au BufRead,BufNewFile * set nowrap
@@ -219,6 +201,14 @@ map <silent> <leader>l :if &relativenumber == 1 <Bar>
       \else <Bar>
     \set relativenumber <Bar>
       \endif<CR>
+
+" Function which removes all trailing whitespace in the current buffer.
+function! RemoveTrailingWhiteSpace()
+  %s/\s\+$//
+endfunction
+
+" Leader, Shift-2 removes all trailing whitespace.
+map <Leader>@ :call RemoveTrailingWhiteSpace()<CR>
 
 " Fill rest of line with characters.
 function! FillLine( str )
