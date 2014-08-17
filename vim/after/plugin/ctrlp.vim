@@ -2,6 +2,7 @@
 
 " Set the max files
 let g:ctrlp_max_files = 10000
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 
 " Optimize file searching
 " if has("unix")
