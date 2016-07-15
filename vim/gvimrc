@@ -22,5 +22,10 @@ function! ToggleFonts(size)
   let &guifont = substitute(&guifont, ':h\zs\d\+', a:size, '')
 endfunction
 
+nnoremap <leader>e :call ToggleFonts(20)<CR>
 nnoremap <leader>w :call ToggleFonts(17)<CR>
-nnoremap <leader>s :call ToggleFonts(15)<CR>
+nnoremap <leader>s :call ToggleFonts(16)<CR>
+nnoremap <leader>x :call ToggleFonts(14)<CR>
+
+highlight Comment gui=italic guifg=#5B636B
+highlight SpellCap guisp=red
