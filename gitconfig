@@ -27,3 +27,6 @@
   lineNumber = true
 [push]
   default = simple
+[commit]
+  verbose = false
+  gpgsign = true
